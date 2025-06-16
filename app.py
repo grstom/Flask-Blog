@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import sql.user
 import sql.cookies
+import sql.posts
 import uuid
 
 db_user = sql.user.Users()
 db_cookies = sql.cookies.Cookies()
+posts = sql.posts.Posts()
 
 app = Flask(__name__)
 
@@ -82,6 +84,27 @@ def lookup():
 
     #when this is finished, need to return the new id to
     #the browser. 'db_cookies' should return this.
+
+@app.route('/post', methods=['GET', 'POST'])
+def post():
+    jsonData = request.get_json()
+
+    postText = jsonData.get('postText')
+    sessionId = jsonData.get('sessionId')
+
+    checkPostTextSize = len(postText)
+    checkCookie = db_cookies.checkCookie(sessionId)
+
+    if checkPostTextSize <= 50 and checkCookie:
+        posts.CreatePost(postText, sessionId)
+        return jsonify({'code': '200', 'message': 'OK'})
+    elif checkPostTextSize >= 50:
+        return jsonify({'code': '500', 'message': 'Message is too long'})
+    elif not checkCookie:
+        return jsonify({'code': '500', 'message': 'User error'}) 
+
+
+
 
 
 

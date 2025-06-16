@@ -1,6 +1,8 @@
-import user
+import cookies
 
-using = user.Users()
+cook = cookies.Cookies()
 
-thingy = using.getInformationAboutUser('f2095e7a-3631-4c4b-97cc-7dd09ef688a4')
-print(thingy)
+thing = cook.checkCookie('19c31f08-8456-47a4-91e0-64e14bf492a5')
+
+if thing:
+    print('ok')

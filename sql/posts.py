@@ -1,10 +1,10 @@
 import mysql.connector
-import cookies
+import sql.cookies
 import datetime
 import uuid
 
 
-cookieDb = cookies.Cookies()
+cookieDb = sql.cookies.Cookies()
 
 
 class Posts():

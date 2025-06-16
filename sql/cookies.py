@@ -86,3 +86,14 @@ class Cookies():
         getCookie = cursor.fetchone()
 
         return getCookie[0]
+
+    def checkCookie(self, cookie):
+        cursor = self.cookie_db.cursor()
+
+        checkIfExists = cursor.execute('''select * from user_cookies where session=%s''', (cookie,))
+        checkIfExists = cursor.fetchone()
+
+        if not checkIfExists:
+            return False
+        else:
+            return checkIfExists[0]
