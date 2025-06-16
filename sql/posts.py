@@ -22,14 +22,13 @@ class Posts():
             db = self.dbname
         )
 
-    def CreatePost(self, text, cookie):
-        newPostId = str(uuid.uuid4())
+    def CreatePost(self, text, cookie, newId):
         userID = cookieDb.getIdByCookie(cookie)
         cursor = self.postDb.cursor()
 
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         time = datetime.datetime.now().strftime("%H:%M:%S")
 
-        cursor.execute('''insert into posts (post, date, time, owner, postid) values (%s, %s, %s, %s, %s)''', (text, date, time, userID, newPostId))
+        cursor.execute('''insert into posts (post, date, time, owner, postid) values (%s, %s, %s, %s, %s)''', (text, date, time, userID, newId))
         self.postDb.commit()
         return True

@@ -1,0 +1,20 @@
+.header {
+    margin-top: 110px;
+    margin-left: 550px;
+    color: black;   
+}
+.header-type {
+    margin-top: 20px;
+    margin-left: 540px;
+    width: 600px;
+    height: 150px;
+    text-align: left; 
+    vertical-align: top;
+    color: black;   
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 1080px;
+    resize: none;
+}

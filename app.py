@@ -96,13 +96,18 @@ def post():
     checkCookie = db_cookies.checkCookie(sessionId)
 
     if checkPostTextSize <= 50 and checkCookie:
-        posts.CreatePost(postText, sessionId)
-        return jsonify({'code': '200', 'message': 'OK'})
+        newId = str(uuid.uuid4())
+        posts.CreatePost(postText, sessionId, newId)
+        return jsonify({'code': '200', 'message': 'OK', 'id': newId})
     elif checkPostTextSize >= 50:
         return jsonify({'code': '500', 'message': 'Message is too long'})
     elif not checkCookie:
         return jsonify({'code': '500', 'message': 'User error'}) 
 
+
+@app.route('/compose')
+def compose():
+    return render_template('post.html')
 
 
 

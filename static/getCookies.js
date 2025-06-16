@@ -1,3 +1,4 @@
+//Get cookies here
 function getCookie(name) {
     let cookies = document.cookie.split('; ');
     for (let cookie of cookies) {
@@ -9,6 +10,10 @@ function getCookie(name) {
     return "";
 }
 
+
+
+//This works for the navbar when getting a user ID
+//It should've been put somewhere else, but oh well
 function getUser() {
     let user = getCookie("userid")
     console.log('ok 1');
@@ -44,5 +49,12 @@ function getUser() {
 
     } else {
         console.log('User not found or is not logged on');
+
+        //remove the 'My blog' button
+        const myblog = document.getElementById('blog');
+        const postButton = document.getElementById('post');
+        myblog.remove();
+        postButton.remove();
+
     };
 }

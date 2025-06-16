@@ -2,7 +2,7 @@
 
 <html>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-home.css') }}">
   <script src="{{ url_for('static', filename='getCookies.js') }}"></script>
 
   <body style="background-color: rgb(173, 216, 230);" onload="getUser()">    
@@ -23,6 +23,10 @@
         
         <a href="/blog" style="text-decoration: none; color: black;">
           <h4 style="margin: 0;" id="blog">My blog</h4>
+        </a>
+
+        <a href="/compose" style="text-decoration: none; color: black;">
+          <h4 style="margin: 0;" id="post">Create a post</h4>
         </a>
       
         <a style="text-decoration: none; color: darkblue;">
