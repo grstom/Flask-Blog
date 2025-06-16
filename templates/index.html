@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='getCookies.js') }}"></script>
+
+  <body style="background-color: rgb(173, 216, 230);" onload="getUser()">    
+  
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+
+        <a href="/" style="text-decoration: none; color: black;">
+            <h4 style="margin: 0;">Our Website</h4>
+        </a>
+
+      <div style="display: flex; gap: 20px;">
+        <a href="/signin" style="text-decoration: none; color: black; visibility: visible">
+            <h4 href="/signin" style="margin: 0;" id="signin">Login</h4>
+        </a>
+        <a href="/signup" style="text-decoration: none; color:black; visibility: visible">
+            <h4 style="margin: 0;" id="signup"> Sign up</h4>
+        </a>
+        
+        <a href="/blog" style="text-decoration: none; color: black;">
+          <h4 style="margin: 0;" id="blog">My blog</h4>
+        </a>
+      
+        <a style="text-decoration: none; color: darkblue;">
+          <h4 style="margin: 0;">| 👤 Hello, <span id="username">you are not logged in..</span></h4>
+        </a>
+
+      </div>
+
+
+    </div>
+    
+    <div style="justify-content: space-between; align-items: center;">
+      <h1>Hello!</h1>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+    </div>
+    
+
+  </body>
+</html>

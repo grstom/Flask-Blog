@@ -1,0 +1,60 @@
+
+.login-box {
+  background-color: rgb(255,255,255);
+  width: 400px;
+  height: 250px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.sign-up-box {
+  background-color: rgb(255,255,255);
+  width: 400px;
+  height: 290px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+
+.sign-up-header {
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+    padding-left: 15px;
+}
+
+.sign-up-username {
+  margin-left: 10px;
+  padding: 0 8px;
+}
+
+.sign-up-password {
+  margin-left: 10px;
+  margin-top: 20px;
+  padding: 0 8px;
+
+}
+
+.sign-up-email {
+  margin-left: 10px;
+  margin-top: 20px;
+  padding: 0 8px;
+
+}
+
+.SignUp {
+  margin-left: 12px;
+  margin-top: 20px;
+}
+
+.SignUpWarning {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.navbar {
+  background-color: white;
+  position: sticky;
+}
